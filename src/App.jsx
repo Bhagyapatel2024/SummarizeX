@@ -1,28 +1,28 @@
 import { ToastContainer } from "react-toastify";
 
+// Importing components
 import Hero from "./components/Hero";
 import Demo from "./components/Demo";
 
-// styles
+// Importing styles
 import "./App.css";
 
-// app
+// App component
 const App = () => {
   return (
     <main>
- 
-      {/* main */}
+      {/* Main Background Section */}
       <div className="main">
         <div className="gradient" />
       </div>
 
-      {/* app */}
+      {/* Application Content Section */}
       <section className="app">
         <Hero />
         <Demo />
       </section>
 
-      {/* toast */}
+      {/* Toast Notifications */}
       <aside>
         <ToastContainer
           position="top-right"
@@ -38,10 +38,10 @@ const App = () => {
           theme="dark"
         />
       </aside>
-   
 
-      {/* About Me Section */}
-      {/* <section className="about-me">
+      {/* About Me Section (Currently Commented Out) */}
+      {/* 
+      <section className="about-me">
         <h2 className="heading">
           <i className="fas fa-user-alt"></i> About <span>Me</span>
         </h2>
@@ -54,10 +54,7 @@ const App = () => {
             alt="A picture of Bhagya Patel"
           />
           <div className="content">
-            <h3>
-            
-            </h3>
-
+            <h3>Your Name</h3>
             <div className="box-container">
               <div className="box">
                 <p>
@@ -70,7 +67,8 @@ const App = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section> 
+      */}
     </main>
   );
 };
