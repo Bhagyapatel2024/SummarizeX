@@ -1,43 +1,44 @@
-/* Tailwind CSS setup */
+/* tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Default styles */
+/* default */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: ;
+
 }
 
-/* Main container styles */
+/* main */
 .main {
-  width: 50vw;
-  min-height: 100vh;
+  /* width: 50vw;
+  min-height: 100vh; */
   position: fixed;
   display: flex;
   justify-content: center;
-  padding: 120px 24px 160px 24px;
+  /* padding: 120px 24px 160px 24px; */
   pointer-events: none;
-  background-color: black;
-  color:white;
+  background-color: rgb(255, 255, 255);
 }
 
 .main:before {
-  background: black;
+  /* background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%); */
+  background-color: rgb(255, 255, 255);
   position: absolute;
   content: "";
-  z-index: 2;
+  /* z-index: 2; */
   width: 100%;
   height: 100%;
   top: 0;
-  color:white;
 }
 
 .main:after {
   content: "";
   background-image: url("/src/assets/grid.svg");
-  z-index: 1;
+  /* z-index: 1; */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -45,20 +46,18 @@
   opacity: 0.4;
   filter: invert(1);
 }
-
-/* About me section */
 .about-me {
   padding: 20px;
   background-color: rgba(240, 240, 240, 0.8); /* Light background with transparency */
 }
-
 .heading {
-  color: rgb(0, 0, 0); /* Use a contrasting color for headings */
+  color: rgb(255, 255, 255); /* Use a contrasting color for headings */
 }
 
 .heading span {
-  color: rgb(0, 0, 0); /* Emphasis color */
+  color: rgb(255, 255, 255); /* You can use a bright color for emphasis */
 }
+
 
 .about-content {
   display: flex;
@@ -72,18 +71,20 @@
 }
 
 .content h3 {
-  color: rgb(0, 0, 0); /* Heading color */
+  color: rgb(0, 0, 0); /* Change to white for better contrast */
 }
 
+
 .box-container {
-  margin-top: 20px; /* Space above contact info */
+  margin-top: 20px; /* Space above the contact info */
+  background-color: black;
 }
 
 .box p {
   margin: 5px 0; /* Space between lines */
 }
 
-/* Gradient effect */
+/* gradient */
 .gradient {
   height: fit-content;
   z-index: 3;
@@ -109,48 +110,48 @@
   opacity: 0.15;
 }
 
-/* Mobile responsiveness */
+/* mobile responsiveness */
 @media screen and (max-width: 640px) {
   .main {
     padding: 24px 12px;
-    width: 100vw; /* Full width on mobile */
+    width: 100vw; /* Use full width on mobile */
   }
 
   .gradient {
-    top: 40px; /* Adjust gradient position */
-    filter: blur(50px); /* Less blur for small screens */
+    top: 40px; /* Adjust the positioning of the gradient for smaller screens */
+    filter: blur(50px); /* Reduce blur effect for smaller screens */
   }
 
   .head_text {
-    font-size: 2.5rem; /* Reduce heading font size */
+    font-size: 2.5rem; /* Reduce font size */
     text-align: center;
     line-height: 1.2;
   }
 
   .desc {
-    font-size: 1rem; /* Smaller text */
+    font-size: 1rem; /* Smaller text for mobile */
     line-height: 1.4;
-    max-width: 100%; /* Expand text width */
-    margin: 20px 0; /* Add spacing */
+    max-width: 100%; /* Allow text to fill more space */
+    margin: 20px 0; /* Add some space around the description */
   }
 
   .black_btn {
-    padding: 8px 16px; /* Smaller padding for buttons */
+    padding: 8px 16px; /* Reduce padding for smaller buttons */
     font-size: 0.875rem; /* Adjust font size */
   }
 
   .url_input {
-    padding: 10px; /* Input padding */
-    width: 100%; /* Full width input */
+    padding: 10px; /* Adjust padding for input */
+    width: 100%; /* Ensure the input takes full width */
   }
 
   .submit_btn {
-    padding: 8px; /* Smaller button padding */
+    padding: 8px; /* Smaller padding for mobile */
   }
 
   .link_card {
-    padding: 10px; /* Reduce padding */
-    flex-direction: column; /* Stack items */
+    padding: 10px; /* Reduce padding for mobile */
+    flex-direction: column; /* Stack items on top of each other */
     align-items: flex-start;
   }
 
@@ -159,36 +160,38 @@
   }
 }
 
-/* Tailwind mobile styles */
+/* tailwind styles for mobile */
 .app {
   @apply flex-col max-w-full px-4; /* Adjust container padding */
 }
 
 .head_text {
-  @apply text-4xl sm:text-5xl; /* Reduce font size */
+  @apply text-4xl sm:text-5xl; /* Reduce font size for small screens */
 }
 
 .desc {
-  @apply text-base sm:text-lg; /* Smaller text */
+  @apply text-base sm:text-lg; /* Smaller text for mobile */
 }
 
 .black_btn {
-  @apply py-2 px-4; /* Button padding */
+  @apply py-2 px-4; /* Reduce padding for buttons */
 }
 
 .url_input {
-  @apply w-full py-2.5 pl-8 pr-10; /* Input padding */
+  @apply w-full py-2.5 pl-8 pr-10; /* Adjust padding */
 }
 
 .submit_btn {
-  @apply w-8 h-8; /* Button size */
+  @apply w-8 h-8; /* Reduce button size */
 }
 
 .link_card {
-  @apply p-2 flex-col items-start; /* Stack items */
+  @apply p-2 flex-col items-start; /* Stack the card items for mobile */
 }
 
-/* Tailwind desktop styles */
+
+/* tailwind styles */
+
 .app {
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
 }
@@ -210,6 +213,7 @@
   font-family: 'Courier New', Courier, monospace; /* Optional for a typewriter feel */
 }
 
+
 .url_input {
   @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 pl-10 pr-12 text-sm shadow-lg font-satoshi font-medium focus:border-black focus:outline-none focus:ring-0;
 }
@@ -219,5 +223,17 @@
 }
 
 .link_card {
-  @apply p-3 flex justify-start items-center flex-row bg-white border border-gray-200 rounded-lg;
+  @apply p-3 flex justify-start items-center flex-row bg-white border border-gray-200 gap-3 rounded-lg;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.blue_gradient {
+  @apply font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.summary_box {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-4;
 }
