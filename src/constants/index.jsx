@@ -5,7 +5,7 @@ const PROJECT_GITHUB_LINK =
 
 // Hero Section
 const HERO_TITLE_LEFT = "Summarize Articles with";
-const HERO_TITLE_RIGHT = "SummarizeX(GPT-4)";
+const HERO_TITLE_RIGHT = "SummarizeX";
 const HERO_SUBTITLE_LEFT = " Its open-source nature encourages community contributions, making it versatile and adaptable to various user needs. Summize enhances productivity by allowing users to quickly understand the core content of articles, making it particularly useful for students, researchers, and professionals who need to process large volumes of text efficiently.";
 const HERO_SUBTITLE_RIGHT =
   "";
